@@ -40,14 +40,24 @@
 			<div class="media-content">
 				<div class="content">
 					<p>
-						<a :href="[trackViewUrl || collectionViewUrl]" target="_blank">
-							<strong>{{ trackCensoredName || trackName }}</strong>
-						</a>
+						<span v-if="wrapperType == 'track'">
+							<a :href="[trackViewUrl || collectionViewUrl]" target="_blank">
+								<strong>{{ trackCensoredName || trackName }}</strong>
+							</a>
 
-						<span v-if="collectionCensoredName || collectionName">
-							<br />
+							<span v-if="collectionCensoredName || collectionName">
+								<br />
 
-							{{ collectionCensoredName || collectionName }}
+								{{ collectionCensoredName || collectionName }}
+							</span>
+						</span>
+
+						<span v-else>
+							<a :href="[trackViewUrl || collectionViewUrl]" target="_blank">
+								<strong>
+									{{ collectionCensoredName || collectionName }}
+								</strong>
+							</a>
 						</span>
 
 						<small v-if="artistName">
