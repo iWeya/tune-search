@@ -4,25 +4,49 @@
   </div>
 </template>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<style lang="scss">
+@import "~sass-material-colors/sass/sass-material-colors";
+
+// Theme Colors
+$black: material-color('grey', '900');
+$primary: material-color('teal', '600');
+$secondary: material-color('purple', '600');
+
+$custom-colors: ('secondary': $secondary);
+
+// Theme Settings
+$radius-small: 0;
+$radius: 0;
+$radius-large: 0;
+
+// Theme Custom Modifiers
+.x-is-fullwidth {
+	width: 100%;
 }
 
-#nav {
-  padding: 30px;
+@import "../node_modules/bulma/bulma.sass";
+
+html {
+	background-color: $white-bis;
+	overflow: auto;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+@keyframes rainbow_background {
+	from {
+		background-color: $primary;
+	}
+
+	to {
+		background-color: $secondary;
+	}
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+.x-rainbow-background {
+	animation: rainbow_background 4s linear 0s infinite alternate;
+}
+
+.x-decorative-image {
+	height: 24px;
+	width: 100%;
 }
 </style>
