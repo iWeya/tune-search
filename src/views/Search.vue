@@ -156,7 +156,12 @@ export default {
 						offset: this.offset
 					}
 				})
-				.then(response => (this.itemList = response.data))
+				.then(response => {
+					this.itemList = response.data
+					this.itemList.results = this.itemList.results.filter(item => {
+						return item.wrapperType != 'artist'
+					})
+				})
 				.finally(() => (this.isSearching = false))
 		}
 	},
