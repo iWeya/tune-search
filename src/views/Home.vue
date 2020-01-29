@@ -7,7 +7,7 @@
 				<div class="columns is-centered">
 					<div class="column is-4">
 						<main>
-							<h1 class="title is-spaced x-logo">
+							<h1 class="title has-text-centered is-spaced x-logo">
 								<img src="../assets/logo-large.min.svg" alt="Logotipo">
 							</h1>
 
