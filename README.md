@@ -1,24 +1,37 @@
-# tune-search
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-## Project setup
-```
-npm install
-```
+# ![TUNE Search](./src/assets/logo-large.min.svg)
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+> SPA para consumo da API pública do iTunes.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Para informações sobre a API, consulte a [documentação](https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/).
 
-### Lints and fixes files
-```
-npm run lint
+## Iniciando
+
+Instale as dependências:
+
+``` bash
+> npm install
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Sirva a aplicação:
+
+``` bash
+> npm run serve
+```
+
+Ou execute um _linting_ sobre os arquivos:
+``` bash
+> npm run lint
+```
+
+## Detalhes
+
+As seguintes bibliotecas e frameworks foram utilizados na construção dessa SPA:
+
+- Axios;
+- Bulma;
+- FontAwesome;
+- SASS Material Colors;
+- Vue.js;
+- Vue-Router.
