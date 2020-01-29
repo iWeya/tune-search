@@ -65,9 +65,23 @@
 
 							Por:
 
-							<a href="">
+							<router-link
+								:to="{
+									name: 'lookup',
+									params: {
+										query: artistId,
+										entity: 'album'
+									}
+								}"
+
+								v-if="artistId"
+							>
 								{{ artistName }}
-							</a>
+							</router-link>
+
+							<span v-else>
+								{{ artistName }}
+							</span>
 						</small>
 
 						<span v-if="collectionPrice">
@@ -120,9 +134,10 @@ export default {
 			wrapperType: this.itemData['wrapperType'],
 			collectionExplicitness: this.itemData['collectionExplicitness'] == 'explicit',
 			trackExplicitness: this.itemData['trackExplicitness'] == 'explicit',
-			kind: this.itemData['kind'],
+			kind: this.itemData['kind'] || this.itemData['collectionType'],
 			trackName: this.itemData['trackName'],
 			artistName: this.itemData['artistName'],
+			artistId: this.itemData['artistId'],
 			collectionName: this.itemData['collectionName'],
 			trackCensoredName: this.itemData['trackCensoredName'],
 			collectionCensoredName: this.itemData['collectionCensoredName'],
